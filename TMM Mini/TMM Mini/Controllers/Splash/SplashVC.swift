@@ -8,6 +8,9 @@
 import Combine
 import UIKit
 
+import Combine
+import UIKit
+
 class SplashVC: UIViewController {
 
     // MARK: - IBOutlets
@@ -21,6 +24,13 @@ class SplashVC: UIViewController {
     private lazy var onBoardViewModel = DependencyContainer.shared
         .makeOnBoardViewModel()
     private var cancellables = Set<AnyCancellable>()
+    
+    // Track animation state
+    private var isAnimationComplete = false
+    private var isDataLoaded = false
+    
+    // Store original positions
+    private var logoOriginalCenter: CGPoint = .zero
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -28,39 +38,121 @@ class SplashVC: UIViewController {
         setupUI()
         setupBindings()
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        // Store original center for animation reference
+        if logoOriginalCenter == .zero {
+            logoOriginalCenter = imgLogo.center
+        }
+    }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        startAnimationSequence()
         viewModel.viewDidAppear.send()
     }
 
     // MARK: - Setup UI
     private func setupUI() {
-        lblAppName.font = AppFont.font(type: .I_Bold, size: 24)
+        lblAppName.font = AppFont.font(type: .I_Bold, size: 22)
+        
+        // Initially hide everything
+        imgLogo.alpha = 0
+        lblAppName.alpha = 0
+        activityIndicator.alpha = 0
         activityIndicator.startAnimating()
-
-        animateUIElements()
     }
 
-    // MARK: - Animations
-    private func animateUIElements() {
-        imgLogo.alpha = 0
-        imgLogo.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
-        lblAppName.alpha = 0
-
+    // MARK: - Rich Animation Sequence
+    private func startAnimationSequence() {
+        // Step 1: Logo appears at center with scale
+        animateLogoAppearance()
+    }
+    
+    // Logo appears at center with bounce
+    private func animateLogoAppearance() {
+        imgLogo.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+        
         UIView.animate(
-            withDuration: 0.8,
+            withDuration: 0.6,
             delay: 0.2,
             usingSpringWithDamping: 0.7,
             initialSpringVelocity: 0.5,
-            options: .curveEaseOut
-        ) {
-            self.imgLogo.alpha = 1
-            self.imgLogo.transform = .identity
+            options: .curveEaseOut,
+            animations: {
+                self.imgLogo.alpha = 1
+                self.imgLogo.transform = CGAffineTransform(scaleX: 1.1, y: 1.1) // Slight overshoot
+            }
+        ) { _ in
+            // Scale back and move up
+            self.animateLogoMoveUp()
         }
-
-        UIView.animate(withDuration: 0.8, delay: 0.4, options: .curveEaseOut) {
-            self.lblAppName.alpha = 1
+    }
+    
+    // Logo moves up to top
+    private func animateLogoMoveUp() {
+        // Calculate final position (100pt from top)
+        let finalY = view.safeAreaInsets.top + 100
+        let finalCenter = CGPoint(x: logoOriginalCenter.x, y: finalY)
+        
+        UIView.animate(
+            withDuration: 0.8,
+            delay: 0.3,
+            usingSpringWithDamping: 0.8,
+            initialSpringVelocity: 0.3,
+            options: .curveEaseInOut,
+            animations: {
+                // Scale back to normal
+                self.imgLogo.transform = .identity
+                
+                // Move to top
+                self.imgLogo.center = finalCenter
+            }
+        ) { _ in
+            // Show app name
+            self.animateAppNameAppearance()
+        }
+    }
+    
+    // App name fades in with slide up effect
+    private func animateAppNameAppearance() {
+        // Start below and slide up
+        lblAppName.transform = CGAffineTransform(translationX: 0, y: 20)
+        
+        UIView.animate(
+            withDuration: 0.6,
+            delay: 0.1,
+            options: .curveEaseOut,
+            animations: {
+                self.lblAppName.alpha = 1
+                self.lblAppName.transform = .identity
+            }
+        ) { _ in
+            // Animation complete
+            self.isAnimationComplete = true
+            self.showActivityIndicatorIfNeeded()
+        }
+    }
+    
+    // Show activity indicator only if data is still loading
+    private func showActivityIndicatorIfNeeded() {
+        if !isDataLoaded {
+            print("SplashVC: Showing activity indicator")
+            UIView.animate(withDuration: 0.3) {
+                self.activityIndicator.alpha = 1
+            }
+        } else {
+            print("SplashVC: Data already loaded, skipping activity indicator")
+        }
+    }
+    
+    // Hide activity indicator when data loads
+    private func hideActivityIndicator() {
+        print("SplashVC: Hiding activity indicator")
+        UIView.animate(withDuration: 0.3) {
+            self.activityIndicator.alpha = 0
         }
     }
 
@@ -71,7 +163,14 @@ class SplashVC: UIViewController {
             .receive(on: DispatchQueue.main)
             .compactMap { $0 }
             .sink { [weak self] destination in
-                self?.navigate(to: destination)
+                print("SplashVC: Navigation destination received: \(destination)")
+                self?.isDataLoaded = true
+                self?.hideActivityIndicator()
+                
+                // Small delay before navigating for smooth transition
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    self?.navigate(to: destination)
+                }
             }
             .store(in: &cancellables)
 
@@ -79,45 +178,45 @@ class SplashVC: UIViewController {
         viewModel.$isCheckingPermission
             .receive(on: DispatchQueue.main)
             .sink { [weak self] isChecking in
-                self?.activityIndicator.isHidden = !isChecking
+                guard let self = self else { return }
+                
+                print("SplashVC: isChecking = \(isChecking)")
+                
+                if !isChecking {
+                    self.isDataLoaded = true
+                    self.hideActivityIndicator()
+                } else if self.isAnimationComplete {
+                    // Only show if animation is complete
+                    self.showActivityIndicatorIfNeeded()
+                }
             }
             .store(in: &cancellables)
 
+        // Observe limited mode alert
         viewModel.$shouldShowLimitedMode
             .receive(on: DispatchQueue.main)
             .filter { $0 }
             .sink { [weak self] _ in
-                print("SplashVC: Showing limited mode alert for returning user")
+                print("SplashVC: Showing limited mode alert")
+                self?.isDataLoaded = true
+                self?.hideActivityIndicator()
                 self?.showLimitedModeAlert()
             }
             .store(in: &cancellables)
-    }
-
-    // MARK: - Handle Authorization Status
-    private func handleAuthorizationStatus(
-        _ status: HealthKitAuthorizationStatus?
-    ) {
-        guard let status = status else { return }
-
-        switch status {
-        case .authorized:
-            print("SplashVC: HealthKit not accessible - Status: \(status)")
-            break
-
-        case .denied, .notDetermined, .unavailable:
-            print("SplashVC: HealthKit not accessible - Status: \(status)")
-            showLimitedModeAlert()
-        }
     }
 
     // MARK: - Limited Mode Alert
     private func showLimitedModeAlert() {
         self.showCustomNotifyAlert { [weak self] positive, negative in
             if positive {
-                // Open Health Settings
+                print("SplashVC: User chose to open settings")
                 self?.onBoardViewModel.openHealthSettings()
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    Utils.sharedInstance.redirectToOnboarding()
+                }
             } else {
-                // Continue to onboarding
+                print("SplashVC: User chose to continue")
                 Utils.sharedInstance.redirectToOnboarding()
             }
         }
@@ -125,17 +224,19 @@ class SplashVC: UIViewController {
 
     // MARK: - Navigation
     private func navigate(to destination: SplashViewModel.NavigationDestination) {
-        // Add fade out animation before navigation
+        // Fade out entire screen
         UIView.animate(
-            withDuration: 0.3,
+            withDuration: 0.4,
             animations: {
                 self.view.alpha = 0
             }
         ) { _ in
             switch destination {
             case .onboarding:
+                print("SplashVC: Navigating to onboarding")
                 Utils.sharedInstance.redirectToOnboarding()
             case .home:
+                print("SplashVC: Navigating to home")
                 Utils.sharedInstance.redirectToHome()
             }
         }
