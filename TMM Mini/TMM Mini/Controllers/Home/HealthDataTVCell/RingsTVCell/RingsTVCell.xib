@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="RingsTVCell" id="KGk-i7-Jjw" customClass="RingsTVCell" customModule="TMM_Mini" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="167"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="167"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PCe-yb-rZZ">
+                        <rect key="frame" x="20" y="0.0" width="280" height="167"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today Summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5by-Wc-q6p">
+                                <rect key="frame" x="10.000000000000007" y="10" width="122.66666666666669" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="descColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="I_Medium">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="boh-cI-ZFq" customClass="FitnessRingsView" customModule="TMM_Mini" customModuleProvider="target">
+                                <rect key="frame" x="10" y="47" width="110" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="VAW-IR-CvG"/>
+                                    <constraint firstAttribute="width" secondItem="boh-cI-ZFq" secondAttribute="height" id="qCc-AW-Bco"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mxG-qd-gJm">
+                                <rect key="frame" x="136" y="53" width="134" height="98"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="6qh-7q-ERT">
+                                        <rect key="frame" x="0.0" y="0.0" width="134" height="44"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHA-ld-nxp">
+                                                <rect key="frame" x="0.0" y="0.0" width="134" height="15.666666666666666"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <color key="textColor" name="descColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="I_Regular">
+                                                        <real key="value" value="13"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8240 / 10000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Tf-nz-C1l">
+                                                <rect key="frame" x="0.0" y="17.666666666666671" width="134" height="26.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <color key="textColor" name="steps_calory_Text"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="I_SemiBold">
+                                                        <real key="value" value="22"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="qQe-wC-md4">
+                                        <rect key="frame" x="0.0" y="54" width="134" height="44"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Active Calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vO-ZP-peR">
+                                                <rect key="frame" x="0.0" y="0.0" width="134" height="15.666666666666666"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <color key="textColor" name="descColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="I_Regular">
+                                                        <real key="value" value="13"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="420 / 500  KCAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGQ-VE-4j8">
+                                                <rect key="frame" x="0.0" y="17.666666666666671" width="134" height="26.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <color key="textColor" name="steps_calory_Text"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="I_SemiBold">
+                                                        <real key="value" value="22"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="card_BG"/>
+                        <constraints>
+                            <constraint firstItem="boh-cI-ZFq" firstAttribute="leading" secondItem="PCe-yb-rZZ" secondAttribute="leading" constant="10" id="BNc-02-Dnv"/>
+                            <constraint firstItem="mxG-qd-gJm" firstAttribute="leading" secondItem="boh-cI-ZFq" secondAttribute="trailing" constant="16" id="IqH-P1-vXo"/>
+                            <constraint firstItem="mxG-qd-gJm" firstAttribute="top" secondItem="boh-cI-ZFq" secondAttribute="top" constant="6" id="T9A-kU-gSg"/>
+                            <constraint firstItem="5by-Wc-q6p" firstAttribute="leading" secondItem="PCe-yb-rZZ" secondAttribute="leading" constant="10" id="XoR-cl-eCk"/>
+                            <constraint firstItem="5by-Wc-q6p" firstAttribute="top" secondItem="PCe-yb-rZZ" secondAttribute="top" constant="10" id="bGn-rM-dwg"/>
+                            <constraint firstAttribute="bottom" secondItem="boh-cI-ZFq" secondAttribute="bottom" constant="10" id="o9C-om-sdi"/>
+                            <constraint firstItem="boh-cI-ZFq" firstAttribute="top" secondItem="5by-Wc-q6p" secondAttribute="bottom" constant="16" id="r66-xh-34T"/>
+                            <constraint firstAttribute="trailing" secondItem="mxG-qd-gJm" secondAttribute="trailing" constant="10" id="xTd-Wd-dy6"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuss">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="PCe-yb-rZZ" secondAttribute="bottom" id="BYd-PM-kpB"/>
+                    <constraint firstAttribute="trailing" secondItem="PCe-yb-rZZ" secondAttribute="trailing" constant="20" id="DsN-dN-Q2K"/>
+                    <constraint firstItem="PCe-yb-rZZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Uul-O4-PyM"/>
+                    <constraint firstItem="PCe-yb-rZZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="tIB-nd-M2B"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="lblCaloriesCount" destination="rGQ-VE-4j8" id="x7f-aa-doq"/>
+                <outlet property="lblStepsCount" destination="7Tf-nz-C1l" id="QVN-wM-wND"/>
+                <outlet property="viewRings" destination="boh-cI-ZFq" id="Qdk-BA-mlP"/>
+            </connections>
+            <point key="canvasLocation" x="31" y="21"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="card_BG">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="descColor">
+            <color red="0.27843137254901962" green="0.33333333333333331" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="steps_calory_Text">
+            <color red="0.0078431372549019607" green="0.023529411764705882" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

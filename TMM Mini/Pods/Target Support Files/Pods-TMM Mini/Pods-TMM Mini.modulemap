@@ -1,0 +1,6 @@
+framework module Pods_TMM_Mini {
+  umbrella header "Pods-TMM Mini-umbrella.h"
+
+  export *
+  module * { export * }
+}

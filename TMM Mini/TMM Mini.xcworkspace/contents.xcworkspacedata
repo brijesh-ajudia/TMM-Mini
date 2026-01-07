@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:FoodEntity+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:FoodEntity+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
+      location = "group:HealthDataEntity+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:HealthDataEntity+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
+      location = "group:TMM Mini.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>

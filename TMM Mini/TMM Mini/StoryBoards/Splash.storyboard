@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SplashVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SplashVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="SplashVC" customModule="TMM_Mini" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UPN-se-qpy">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TMM_256" translatesAutoresizingMaskIntoConstraints="NO" id="kC3-sN-4zJ">
+                                        <rect key="frame" x="146.66666666666666" y="174" width="100" height="135.33333333333337"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="bEX-Xg-BBb"/>
+                                            <constraint firstAttribute="width" secondItem="kC3-sN-4zJ" secondAttribute="height" multiplier="189:256" id="tPB-kA-iPh"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TMM-mini" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qh8-bf-fVn">
+                                        <rect key="frame" x="157" y="329.33333333333331" width="79" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="primary_Text"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="I_SemiBold">
+                                                <real key="value" value="24"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="wry-US-8Bq">
+                                        <rect key="frame" x="178" y="390.33333333333331" width="37" height="37"/>
+                                        <color key="color" name="button_TextTitle"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.53333333329999999" green="0.54901960780000003" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="wry-US-8Bq" firstAttribute="centerX" secondItem="UPN-se-qpy" secondAttribute="centerX" id="Zgw-yG-ZtU"/>
+                                    <constraint firstItem="kC3-sN-4zJ" firstAttribute="centerX" secondItem="UPN-se-qpy" secondAttribute="centerX" id="kl6-u9-fzp"/>
+                                    <constraint firstItem="wry-US-8Bq" firstAttribute="top" secondItem="qh8-bf-fVn" secondAttribute="bottom" constant="40" id="tr3-mV-7Rc"/>
+                                    <constraint firstItem="qh8-bf-fVn" firstAttribute="centerX" secondItem="UPN-se-qpy" secondAttribute="centerX" id="wEL-08-b5l"/>
+                                    <constraint firstItem="qh8-bf-fVn" firstAttribute="top" secondItem="kC3-sN-4zJ" secondAttribute="bottom" constant="20" id="x75-xv-qrF"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="UPN-se-qpy" secondAttribute="bottom" id="5by-c2-O2K"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="UPN-se-qpy" secondAttribute="trailing" id="MYB-pE-vIm"/>
+                            <constraint firstItem="UPN-se-qpy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="e9Y-tQ-oJ2"/>
+                            <constraint firstItem="kC3-sN-4zJ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="56" id="efk-WY-TLT"/>
+                            <constraint firstAttribute="top" secondItem="UPN-se-qpy" secondAttribute="top" id="jeA-v6-sog"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="wry-US-8Bq" id="9FD-o9-Tnj"/>
+                        <outlet property="imgLogo" destination="kC3-sN-4zJ" id="pOn-hD-inc"/>
+                        <outlet property="lblAppName" destination="qh8-bf-fVn" id="fMe-ek-RMd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="81.679389312977094" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TMM_256" width="189" height="256"/>
+        <namedColor name="button_TextTitle">
+            <color red="0.066666666666666666" green="0.094117647058823528" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primary_Text">
+            <color red="0.97254901960784312" green="0.98039215686274506" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

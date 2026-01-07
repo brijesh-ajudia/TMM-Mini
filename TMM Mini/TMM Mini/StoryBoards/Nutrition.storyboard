@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--NutritionVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="NutritionVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="NutritionVC" customModule="TMM_Mini" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GP8-Fp-iQA">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHx-qX-ITM">
+                                        <rect key="frame" x="20" y="122" width="36" height="36"/>
+                                        <color key="backgroundColor" name="button_BG"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="MY6-hC-r7y"/>
+                                            <constraint firstAttribute="width" secondItem="eHx-qX-ITM" secondAttribute="height" multiplier="1:1" id="w0M-bD-Gox"/>
+                                        </constraints>
+                                        <color key="tintColor" name="button_TextTitle"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="chevron.left" catalog="system"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuss">
+                                                <real key="value" value="18"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="backAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="rCx-nf-o6m"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uPY-qt-ddH">
+                                        <rect key="frame" x="101" y="118" width="191" height="44"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nutrition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShA-pE-aj1">
+                                                <rect key="frame" x="0.0" y="0.0" width="191" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="I_SemiBold">
+                                                        <real key="value" value="22"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track what you eat today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzN-Rl-eRe">
+                                                <rect key="frame" x="0.0" y="23" width="191" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="privacyText"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="I_Regular">
+                                                        <real key="value" value="13"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="vzN-Rl-eRe" secondAttribute="bottom" id="3ax-iB-anI"/>
+                                            <constraint firstAttribute="trailing" secondItem="ShA-pE-aj1" secondAttribute="trailing" id="5TJ-6R-ITh"/>
+                                            <constraint firstItem="vzN-Rl-eRe" firstAttribute="leading" secondItem="uPY-qt-ddH" secondAttribute="leading" id="D5m-Ul-vGS"/>
+                                            <constraint firstItem="vzN-Rl-eRe" firstAttribute="centerX" secondItem="uPY-qt-ddH" secondAttribute="centerX" id="Fyd-pa-3uE"/>
+                                            <constraint firstItem="ShA-pE-aj1" firstAttribute="centerX" secondItem="uPY-qt-ddH" secondAttribute="centerX" id="Wth-0z-j2h"/>
+                                            <constraint firstAttribute="trailing" secondItem="vzN-Rl-eRe" secondAttribute="trailing" id="ZgI-cg-ljU"/>
+                                            <constraint firstItem="ShA-pE-aj1" firstAttribute="top" secondItem="uPY-qt-ddH" secondAttribute="top" id="eT4-pL-lYl"/>
+                                            <constraint firstItem="ShA-pE-aj1" firstAttribute="leading" secondItem="uPY-qt-ddH" secondAttribute="leading" id="lqf-Ew-46n"/>
+                                            <constraint firstItem="vzN-Rl-eRe" firstAttribute="top" secondItem="ShA-pE-aj1" secondAttribute="bottom" constant="2" id="xdr-6R-bNX"/>
+                                        </constraints>
+                                    </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aTY-lJ-QdQ">
+                                        <rect key="frame" x="0.0" y="172" width="393" height="536"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8Q-ep-swh" customClass="CustomEmptyView" customModule="TMM_Mini" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="172" width="393" height="536"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zKU-W8-KWy" customClass="CustomButton" customModule="TMM_Mini" customModuleProvider="target">
+                                        <rect key="frame" x="28" y="718" width="337" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="YrB-Xh-fXC"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="viewMainRadius">
+                                                <real key="value" value="17"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="buttonTitle" value="Log Meal"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isAcceptStyle" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="BG"/>
+                                <constraints>
+                                    <constraint firstItem="b8Q-ep-swh" firstAttribute="leading" secondItem="aTY-lJ-QdQ" secondAttribute="leading" id="0pi-rX-Px8"/>
+                                    <constraint firstItem="b8Q-ep-swh" firstAttribute="trailing" secondItem="aTY-lJ-QdQ" secondAttribute="trailing" id="6CA-P9-L2h"/>
+                                    <constraint firstItem="aTY-lJ-QdQ" firstAttribute="top" secondItem="uPY-qt-ddH" secondAttribute="bottom" constant="10" id="J3d-AP-TCK"/>
+                                    <constraint firstItem="eHx-qX-ITM" firstAttribute="leading" secondItem="GP8-Fp-iQA" secondAttribute="leading" constant="20" id="KJv-d8-dzO"/>
+                                    <constraint firstItem="zKU-W8-KWy" firstAttribute="leading" secondItem="GP8-Fp-iQA" secondAttribute="leading" constant="28" id="OVH-qU-SuZ"/>
+                                    <constraint firstItem="aTY-lJ-QdQ" firstAttribute="leading" secondItem="GP8-Fp-iQA" secondAttribute="leading" id="SY6-YQ-3Is"/>
+                                    <constraint firstItem="b8Q-ep-swh" firstAttribute="top" secondItem="aTY-lJ-QdQ" secondAttribute="top" id="W41-c9-OCH"/>
+                                    <constraint firstItem="zKU-W8-KWy" firstAttribute="top" secondItem="aTY-lJ-QdQ" secondAttribute="bottom" constant="10" id="Y3d-BE-Rvq"/>
+                                    <constraint firstAttribute="trailing" secondItem="aTY-lJ-QdQ" secondAttribute="trailing" id="laA-5D-M9N"/>
+                                    <constraint firstItem="b8Q-ep-swh" firstAttribute="bottom" secondItem="aTY-lJ-QdQ" secondAttribute="bottom" id="mzG-8F-kHQ"/>
+                                    <constraint firstItem="uPY-qt-ddH" firstAttribute="centerX" secondItem="GP8-Fp-iQA" secondAttribute="centerX" id="qBg-c2-KfE"/>
+                                    <constraint firstItem="zKU-W8-KWy" firstAttribute="centerX" secondItem="GP8-Fp-iQA" secondAttribute="centerX" id="uI6-sM-Bgb"/>
+                                    <constraint firstAttribute="trailing" secondItem="zKU-W8-KWy" secondAttribute="trailing" constant="28" id="ubo-b8-CAu"/>
+                                    <constraint firstItem="eHx-qX-ITM" firstAttribute="centerY" secondItem="uPY-qt-ddH" secondAttribute="centerY" id="yo4-Pl-Ufo"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GP8-Fp-iQA" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="307-ja-Ot7"/>
+                            <constraint firstItem="uPY-qt-ddH" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="AlK-aC-Ng0"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="zKU-W8-KWy" secondAttribute="bottom" constant="16" id="P7x-Rp-Lk7"/>
+                            <constraint firstItem="GP8-Fp-iQA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="b9p-oX-ftK"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="GP8-Fp-iQA" secondAttribute="trailing" id="jmA-r2-uHy"/>
+                            <constraint firstAttribute="bottom" secondItem="GP8-Fp-iQA" secondAttribute="bottom" id="sxt-xA-Xbs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnNutrition" destination="zKU-W8-KWy" id="OLT-Z7-NbT"/>
+                        <outlet property="emptyView" destination="b8Q-ep-swh" id="8t5-fm-o1M"/>
+                        <outlet property="tblMeals" destination="aTY-lJ-QdQ" id="rJK-8l-F7E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="81.679389312977094" y="3.5211267605633805"/>
+        </scene>
+        <!--Log MealVC-->
+        <scene sceneID="sE7-I8-6rt">
+            <objects>
+                <viewController storyboardIdentifier="LogMealVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="y7r-Sm-gwK" customClass="LogMealVC" customModule="TMM_Mini" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jr0-fX-O1r">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JdS-zY-5U6">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiU-bR-XDU">
+                                        <rect key="frame" x="337" y="144" width="36" height="36"/>
+                                        <color key="backgroundColor" name="button_BG"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="fiU-bR-XDU" secondAttribute="height" multiplier="1:1" id="8dX-mv-hkp"/>
+                                            <constraint firstAttribute="height" constant="36" id="Cau-od-lSR"/>
+                                        </constraints>
+                                        <color key="tintColor" name="button_TextTitle"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="multiply" catalog="system"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuss">
+                                                <real key="value" value="18"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="backAction:" destination="y7r-Sm-gwK" eventType="touchUpInside" id="NM0-89-1GV"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log Meal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2BI-mf-AvQ">
+                                        <rect key="frame" x="162" y="152" width="69.333333333333314" height="20.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="I_SemiBold">
+                                                <real key="value" value="22"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6tW-gh-lKS">
+                                        <rect key="frame" x="28" y="200" width="337" height="498"/>
+                                        <subviews>
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfx-D1-FlM">
+                                                <rect key="frame" x="0.0" y="0.0" width="337" height="498"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="kZb-wt-qbN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="337" height="566.66666666666663"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Gl3-zT-Ywj" userLabel="FoodSatck">
+                                                                <rect key="frame" x="0.0" y="0.0" width="337" height="91.333333333333329"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BUb-gA-fQz">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="337" height="71.666666666666671"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpj-ZV-2NI">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="337" height="15.666666666666666"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                                <color key="textColor" name="descColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="I_Medium">
+                                                                                        <real key="value" value="13"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </label>
+                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="e.g. Grilled chicken sandwich" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r4k-Gt-NMF">
+                                                                                <rect key="frame" x="0.0" y="23.666666666666657" width="337" height="48"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="48" id="JhF-K5-xc3"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" name="textColor"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuss">
+                                                                                        <real key="value" value="12"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="I_Regular">
+                                                                                        <real key="value" value="16"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                        <color key="value" name="E5E7EB"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                        <real key="value" value="1"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lu8-eW-nYH">
+                                                                        <rect key="frame" x="0.0" y="75.666666666666686" width="337" height="15.666666666666671"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <color key="textColor" red="0.76078431372549016" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="I_Medium">
+                                                                                <real key="value" value="13"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" name="F8FAFC"/>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="P2q-hx-c1Z" userLabel="FoodSatck">
+                                                                <rect key="frame" x="0.0" y="103.33333333333331" width="337" height="91.333333333333314"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BiI-7C-evR">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="337" height="71.666666666666671"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUF-7R-uLr">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="337" height="15.666666666666666"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                                <color key="textColor" name="descColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="I_Medium">
+                                                                                        <real key="value" value="13"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </label>
+                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Calories" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mpo-ia-Rjc">
+                                                                                <rect key="frame" x="0.0" y="23.666666666666686" width="337" height="48"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="48" id="wSr-Gl-STp"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" name="textColor"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuss">
+                                                                                        <real key="value" value="12"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="I_Regular">
+                                                                                        <real key="value" value="16"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                        <color key="value" name="E5E7EB"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                        <real key="value" value="1"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teq-3P-9kO">
+                                                                        <rect key="frame" x="0.0" y="75.666666666666686" width="337" height="15.666666666666671"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <color key="textColor" red="0.76078431369999999" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="I_Medium">
+                                                                                <real key="value" value="13"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" name="F8FAFC"/>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="2I5-g0-LvV" userLabel="FoodSatck">
+                                                                <rect key="frame" x="0.0" y="206.66666666666669" width="337" height="91.333333333333314"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RqL-do-0Hk">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="337" height="71.666666666666671"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Protein" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hm-NX-brT">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="337" height="15.666666666666666"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                                <color key="textColor" name="descColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="I_Medium">
+                                                                                        <real key="value" value="13"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </label>
+                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Protein (g)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y4K-kw-LTU">
+                                                                                <rect key="frame" x="0.0" y="23.666666666666629" width="337" height="48"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="48" id="8l2-b8-KXY"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" name="textColor"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuss">
+                                                                                        <real key="value" value="12"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="I_Regular">
+                                                                                        <real key="value" value="16"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                        <color key="value" name="E5E7EB"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                        <real key="value" value="1"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amu-0D-SRT">
+                                                                        <rect key="frame" x="0.0" y="75.666666666666629" width="337" height="15.666666666666671"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <color key="textColor" red="0.76078431369999999" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="I_Medium">
+                                                                                <real key="value" value="13"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" name="F8FAFC"/>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="5TS-Ll-E2s" userLabel="FoodSatck">
+                                                                <rect key="frame" x="0.0" y="310" width="337" height="91.333333333333314"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pfu-Gt-wnc">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="337" height="71.666666666666671"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carbs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DhA-Gg-hbz">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="337" height="15.666666666666666"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                                <color key="textColor" name="descColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="I_Medium">
+                                                                                        <real key="value" value="13"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </label>
+                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Carbs (g)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R9j-b9-VDB">
+                                                                                <rect key="frame" x="0.0" y="23.666666666666629" width="337" height="48"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="48" id="sEY-dZ-9Vs"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" name="textColor"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuss">
+                                                                                        <real key="value" value="12"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="I_Regular">
+                                                                                        <real key="value" value="16"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                        <color key="value" name="E5E7EB"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                        <real key="value" value="1"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydR-Ql-Nz0">
+                                                                        <rect key="frame" x="0.0" y="75.666666666666629" width="337" height="15.666666666666671"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <color key="textColor" red="0.76078431369999999" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="I_Medium">
+                                                                                <real key="value" value="13"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" name="F8FAFC"/>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="qzA-G2-NrM" userLabel="FoodSatck">
+                                                                <rect key="frame" x="0.0" y="413.33333333333337" width="337" height="91.333333333333314"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OQV-Ke-TSW">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="337" height="71.666666666666671"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZa-f8-enE">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="337" height="15.666666666666666"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                                <color key="textColor" name="descColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="I_Medium">
+                                                                                        <real key="value" value="13"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </label>
+                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Fat (g)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Zs-XE-VPY">
+                                                                                <rect key="frame" x="0.0" y="23.666666666666629" width="337" height="48"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="48" id="Pzn-IC-YCD"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" name="textColor"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuss">
+                                                                                        <real key="value" value="12"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="I_Regular">
+                                                                                        <real key="value" value="16"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                        <color key="value" name="E5E7EB"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                        <real key="value" value="1"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vx3-wy-nVl">
+                                                                        <rect key="frame" x="0.0" y="75.666666666666629" width="337" height="15.666666666666671"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <color key="textColor" red="0.76078431369999999" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="I_Medium">
+                                                                                <real key="value" value="13"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" name="F8FAFC"/>
+                                                            </stackView>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dv8-sz-ycV" customClass="CustomButton" customModule="TMM_Mini" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="516.66666666666663" width="337" height="50"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="50" id="bp1-0s-wWr"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="viewMainRadius">
+                                                                        <real key="value" value="17"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonTitle" value="Scan barcode"/>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAcceptStyle" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="kZb-wt-qbN" firstAttribute="leading" secondItem="gfx-D1-FlM" secondAttribute="leading" id="3aU-xg-Y4j"/>
+                                                    <constraint firstAttribute="bottom" secondItem="kZb-wt-qbN" secondAttribute="bottom" id="NIw-V1-iNz"/>
+                                                    <constraint firstItem="kZb-wt-qbN" firstAttribute="width" secondItem="gfx-D1-FlM" secondAttribute="width" id="QFQ-8R-Mu2"/>
+                                                    <constraint firstAttribute="trailing" secondItem="kZb-wt-qbN" secondAttribute="trailing" id="iiq-KG-ww7"/>
+                                                    <constraint firstItem="kZb-wt-qbN" firstAttribute="top" secondItem="gfx-D1-FlM" secondAttribute="top" id="wHJ-FH-6im"/>
+                                                </constraints>
+                                            </scrollView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="gfx-D1-FlM" firstAttribute="top" secondItem="6tW-gh-lKS" secondAttribute="top" id="KJx-hK-x3W"/>
+                                            <constraint firstAttribute="bottom" secondItem="gfx-D1-FlM" secondAttribute="bottom" id="LSj-ns-BfM"/>
+                                            <constraint firstItem="gfx-D1-FlM" firstAttribute="width" secondItem="6tW-gh-lKS" secondAttribute="width" id="Te7-8c-2Ke"/>
+                                            <constraint firstItem="gfx-D1-FlM" firstAttribute="leading" secondItem="6tW-gh-lKS" secondAttribute="leading" id="bka-yS-Nds"/>
+                                            <constraint firstAttribute="trailing" secondItem="gfx-D1-FlM" secondAttribute="trailing" id="dVR-9W-RkD"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zxj-pQ-Krh" customClass="CustomButton" customModule="TMM_Mini" customModuleProvider="target">
+                                        <rect key="frame" x="28" y="718" width="337" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="LzU-ND-sZG"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="viewMainRadius">
+                                                <real key="value" value="17"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="buttonTitle" value="Log Meal"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isAcceptStyle" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="BG"/>
+                                <constraints>
+                                    <constraint firstItem="6tW-gh-lKS" firstAttribute="leading" secondItem="JdS-zY-5U6" secondAttribute="leading" constant="28" id="9yi-dI-XSz"/>
+                                    <constraint firstAttribute="trailing" secondItem="6tW-gh-lKS" secondAttribute="trailing" constant="28" id="DKa-ER-8un"/>
+                                    <constraint firstItem="zxj-pQ-Krh" firstAttribute="top" secondItem="6tW-gh-lKS" secondAttribute="bottom" constant="20" id="Hx6-N2-FW5"/>
+                                    <constraint firstItem="zxj-pQ-Krh" firstAttribute="centerX" secondItem="JdS-zY-5U6" secondAttribute="centerX" id="NLn-aB-dwT"/>
+                                    <constraint firstItem="6tW-gh-lKS" firstAttribute="top" secondItem="fiU-bR-XDU" secondAttribute="bottom" constant="20" id="U6O-c8-aJK"/>
+                                    <constraint firstItem="2BI-mf-AvQ" firstAttribute="centerY" secondItem="fiU-bR-XDU" secondAttribute="centerY" id="Y7V-hR-Qfw"/>
+                                    <constraint firstItem="zxj-pQ-Krh" firstAttribute="leading" secondItem="JdS-zY-5U6" secondAttribute="leading" constant="28" id="aDE-et-Ema"/>
+                                    <constraint firstItem="2BI-mf-AvQ" firstAttribute="centerX" secondItem="JdS-zY-5U6" secondAttribute="centerX" id="cVC-p1-P2j"/>
+                                    <constraint firstAttribute="trailing" secondItem="fiU-bR-XDU" secondAttribute="trailing" constant="20" id="eHY-qI-Gk7"/>
+                                    <constraint firstAttribute="trailing" secondItem="zxj-pQ-Krh" secondAttribute="trailing" constant="28" id="fge-pb-KMW"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="V1K-Qu-HVt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="V1K-Qu-HVt" firstAttribute="bottom" secondItem="zxj-pQ-Krh" secondAttribute="bottom" constant="16" id="FPs-cq-INa"/>
+                            <constraint firstItem="JdS-zY-5U6" firstAttribute="leading" secondItem="V1K-Qu-HVt" secondAttribute="leading" id="IyB-DW-L09"/>
+                            <constraint firstItem="fiU-bR-XDU" firstAttribute="top" secondItem="V1K-Qu-HVt" secondAttribute="top" constant="26" id="JZT-IA-5cX"/>
+                            <constraint firstItem="JdS-zY-5U6" firstAttribute="top" secondItem="jr0-fX-O1r" secondAttribute="top" id="OWj-Wx-22d"/>
+                            <constraint firstAttribute="bottom" secondItem="JdS-zY-5U6" secondAttribute="bottom" id="fkw-gc-jvo"/>
+                            <constraint firstItem="JdS-zY-5U6" firstAttribute="trailing" secondItem="V1K-Qu-HVt" secondAttribute="trailing" id="zR4-yb-MqI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnLogMeal" destination="zxj-pQ-Krh" id="Z9p-2l-VHw"/>
+                        <outlet property="btnScan" destination="dv8-sz-ycV" id="YFR-wj-j1A"/>
+                        <outlet property="lblErrorCalories" destination="teq-3P-9kO" id="dec-8q-fxa"/>
+                        <outlet property="lblErrorCarbs" destination="ydR-Ql-Nz0" id="xht-Hf-tic"/>
+                        <outlet property="lblErrorFat" destination="Vx3-wy-nVl" id="70m-OI-51G"/>
+                        <outlet property="lblErrorFoodName" destination="lu8-eW-nYH" id="ATM-Ok-r9C"/>
+                        <outlet property="lblErrorProtein" destination="amu-0D-SRT" id="iYX-ep-q65"/>
+                        <outlet property="lblTitle" destination="2BI-mf-AvQ" id="p5m-Nf-Onh"/>
+                        <outlet property="txtCalories" destination="Mpo-ia-Rjc" id="IYd-Nh-VPM"/>
+                        <outlet property="txtCarbs" destination="R9j-b9-VDB" id="9mc-65-iBa"/>
+                        <outlet property="txtFat" destination="5Zs-XE-VPY" id="Dlx-fg-07i"/>
+                        <outlet property="txtFoodName" destination="r4k-Gt-NMF" id="AQV-xE-CBZ"/>
+                        <outlet property="txtProtein" destination="Y4K-kw-LTU" id="LHw-TI-6ga"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jtq-4m-FZE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="813" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.left" catalog="system" width="97" height="128"/>
+        <image name="multiply" catalog="system" width="128" height="111"/>
+        <namedColor name="BG">
+            <color red="0.97254901960784312" green="0.98039215686274506" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="E5E7EB">
+            <color red="0.89803921568627454" green="0.90588235294117647" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="F8FAFC">
+            <color red="0.97254901960784312" green="0.98039215686274506" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="button_BG">
+            <color red="0.89803921568627454" green="0.90588235294117647" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="button_TextTitle">
+            <color red="0.066666666666666666" green="0.094117647058823528" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="descColor">
+            <color red="0.27843137254901962" green="0.33333333333333331" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="privacyText">
+            <color red="0.39215686274509803" green="0.45490196078431372" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textColor">
+            <color red="0.0078431372549019607" green="0.023529411764705882" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

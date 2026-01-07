@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ChartTVCell" id="KGk-i7-Jjw" customClass="ChartTVCell" customModule="TMM_Mini" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="205"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="205"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tf1-a7-KZj">
+                        <rect key="frame" x="20" y="0.0" width="280" height="205"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7-Day Trend Chart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hm-bY-Xs0">
+                                <rect key="frame" x="0.0" y="10" width="127" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" name="steps_calory_Text"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="I_SemiBold">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KVN-I5-drY">
+                                <rect key="frame" x="141" y="3" width="139" height="33"/>
+                                <segments>
+                                    <segment title="Steps"/>
+                                    <segment title="Calories"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" name="toggle_BG"/>
+                                <connections>
+                                    <action selector="segmentChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="4WQ-cW-PJR"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qbf-MS-kuW">
+                                <rect key="frame" x="0.0" y="45" width="280" height="160"/>
+                                <color key="backgroundColor" name="card_BG"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="azW-e7-309"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuss">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="qbf-MS-kuW" firstAttribute="top" secondItem="KVN-I5-drY" secondAttribute="bottom" constant="10" id="0kR-QE-zGJ"/>
+                            <constraint firstItem="qbf-MS-kuW" firstAttribute="leading" secondItem="tf1-a7-KZj" secondAttribute="leading" id="C44-6Z-5mb"/>
+                            <constraint firstAttribute="trailing" secondItem="KVN-I5-drY" secondAttribute="trailing" id="ID4-YW-KEx"/>
+                            <constraint firstAttribute="bottom" secondItem="qbf-MS-kuW" secondAttribute="bottom" id="Y6M-Cy-eSL"/>
+                            <constraint firstItem="KVN-I5-drY" firstAttribute="centerY" secondItem="3hm-bY-Xs0" secondAttribute="centerY" id="fhT-G2-LKC"/>
+                            <constraint firstItem="3hm-bY-Xs0" firstAttribute="top" secondItem="tf1-a7-KZj" secondAttribute="top" constant="10" id="gS2-sJ-jsu"/>
+                            <constraint firstItem="3hm-bY-Xs0" firstAttribute="leading" secondItem="tf1-a7-KZj" secondAttribute="leading" id="s6a-PT-W2y"/>
+                            <constraint firstAttribute="trailing" secondItem="qbf-MS-kuW" secondAttribute="trailing" id="uR8-hi-3EP"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="tf1-a7-KZj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="2yT-PH-LFr"/>
+                    <constraint firstAttribute="bottom" secondItem="tf1-a7-KZj" secondAttribute="bottom" id="DiF-BL-eVN"/>
+                    <constraint firstItem="tf1-a7-KZj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="VPp-gV-K1k"/>
+                    <constraint firstAttribute="trailing" secondItem="tf1-a7-KZj" secondAttribute="trailing" constant="20" id="Y08-Sm-4l2"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="chartContainerView" destination="qbf-MS-kuW" id="gAA-0l-nsu"/>
+                <outlet property="segmentControl" destination="KVN-I5-drY" id="MOL-BF-tk4"/>
+            </connections>
+            <point key="canvasLocation" x="-55" y="20"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="card_BG">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="steps_calory_Text">
+            <color red="0.0078431372549019607" green="0.023529411764705882" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="toggle_BG">
+            <color red="0.89803921568627454" green="0.90588235294117647" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

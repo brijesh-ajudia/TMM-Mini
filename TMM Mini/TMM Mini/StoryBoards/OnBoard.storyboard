@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YWt-Ph-qcA">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--On BoardVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="OnBoardVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="OnBoardVC" customModule="TMM_Mini" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Yy-8y-2Fk">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_OnBoard" translatesAutoresizingMaskIntoConstraints="NO" id="4SA-WF-S91">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Health, Clearly Tracked." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwP-LD-P9U">
+                                        <rect key="frame" x="25" y="520.66666666666663" width="325" height="79.333333333333371"/>
+                                        <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="34"/>
+                                        <color key="textColor" name="primary_Text"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEl-kH-grb">
+                                        <rect key="frame" x="25" y="610" width="325" height="56"/>
+                                        <string key="text">See your daily steps and calories at a glance
+Track weekly trends without the noise
+Stay motivated with simple insights</string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="I_Regular">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4dl-xX-mQv" customClass="CustomButton" customModule="TMM_Mini" customModuleProvider="target">
+                                        <rect key="frame" x="28" y="694" width="319" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="tdj-bO-b3m"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isAcceptStyle" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="buttonTitle" value="Connect Health"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="viewMainRadius">
+                                                <real key="value" value="17"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="dwP-LD-P9U" secondAttribute="trailing" constant="25" id="1TR-XC-cXk"/>
+                                    <constraint firstAttribute="trailing" secondItem="pEl-kH-grb" secondAttribute="trailing" constant="25" id="5gF-z8-n2l"/>
+                                    <constraint firstItem="dwP-LD-P9U" firstAttribute="leading" secondItem="5Yy-8y-2Fk" secondAttribute="leading" constant="25" id="NU3-ie-3Od"/>
+                                    <constraint firstItem="4SA-WF-S91" firstAttribute="leading" secondItem="5Yy-8y-2Fk" secondAttribute="leading" id="Wth-x0-P0f"/>
+                                    <constraint firstAttribute="bottom" secondItem="4SA-WF-S91" secondAttribute="bottom" id="ZPL-Ke-w9D"/>
+                                    <constraint firstItem="4dl-xX-mQv" firstAttribute="leading" secondItem="5Yy-8y-2Fk" secondAttribute="leading" constant="28" id="ajW-kt-lgq"/>
+                                    <constraint firstItem="pEl-kH-grb" firstAttribute="top" secondItem="dwP-LD-P9U" secondAttribute="bottom" constant="10" id="d6a-XM-7ON"/>
+                                    <constraint firstItem="4SA-WF-S91" firstAttribute="top" secondItem="5Yy-8y-2Fk" secondAttribute="top" id="qKo-5A-elE"/>
+                                    <constraint firstItem="4dl-xX-mQv" firstAttribute="top" secondItem="pEl-kH-grb" secondAttribute="bottom" constant="28" id="rAf-uH-Pl4"/>
+                                    <constraint firstAttribute="trailing" secondItem="4SA-WF-S91" secondAttribute="trailing" id="ubh-3g-MHE"/>
+                                    <constraint firstAttribute="trailing" secondItem="4dl-xX-mQv" secondAttribute="trailing" constant="28" id="weV-QG-m89"/>
+                                    <constraint firstItem="pEl-kH-grb" firstAttribute="leading" secondItem="5Yy-8y-2Fk" secondAttribute="leading" constant="25" id="z1Y-rW-DtM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5Yy-8y-2Fk" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="6dv-PZ-jyE"/>
+                            <constraint firstAttribute="bottom" secondItem="5Yy-8y-2Fk" secondAttribute="bottom" id="KA1-vo-tRd"/>
+                            <constraint firstAttribute="trailing" secondItem="5Yy-8y-2Fk" secondAttribute="trailing" id="KvU-qn-haF"/>
+                            <constraint firstItem="4dl-xX-mQv" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="fYW-Ot-qLa"/>
+                            <constraint firstItem="5Yy-8y-2Fk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="xhq-SJ-Zxc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zX0-wK-ZJI"/>
+                    <connections>
+                        <outlet property="btnConnectHealth" destination="4dl-xX-mQv" id="txc-7W-nhr"/>
+                        <outlet property="lblPoints" destination="pEl-kH-grb" id="B9F-iW-8pb"/>
+                        <outlet property="lblTitle" destination="dwP-LD-P9U" id="1PR-N6-8Eu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1061.5999999999999" y="-2.2167487684729066"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Lbs-Fj-LMK">
+            <objects>
+                <navigationController storyboardIdentifier="OnBoardNavVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="YWt-Ph-qcA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7aY-16-GZj">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="5Jh-5C-Cf8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XOw-Z8-YWj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="300" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="img_OnBoard" width="402" height="874"/>
+        <namedColor name="primary_Text">
+            <color red="0.97254901960784312" green="0.98039215686274506" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

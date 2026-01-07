@@ -1,0 +1,32 @@
+PODS:
+  - IQKeyboardManagerSwift (7.1.1)
+  - lottie-ios (4.5.0)
+  - MKRingProgressView (2.3.0)
+  - SkeletonView (1.30.4)
+  - TOCropViewController (2.7.4)
+
+DEPENDENCIES:
+  - IQKeyboardManagerSwift
+  - lottie-ios
+  - MKRingProgressView
+  - SkeletonView
+  - TOCropViewController
+
+SPEC REPOS:
+  trunk:
+    - IQKeyboardManagerSwift
+    - lottie-ios
+    - MKRingProgressView
+    - SkeletonView
+    - TOCropViewController
+
+SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: d7f3d3a562c237a0e7335e657cd598c452f57f1b
+  lottie-ios: a881093fab623c467d3bce374367755c272bdd59
+  MKRingProgressView: f534209b9a1edc0beb2ea613e6b953ea2195b565
+  SkeletonView: 5a050f6411e697abd4cda0a8d767013399dccd69
+  TOCropViewController: 80b8985ad794298fb69d3341de183f33d1853654
+
+PODFILE CHECKSUM: 9e74e0764cc2b2e861cc83bc1a453f706c3f70e2
+
+COCOAPODS: 1.16.2

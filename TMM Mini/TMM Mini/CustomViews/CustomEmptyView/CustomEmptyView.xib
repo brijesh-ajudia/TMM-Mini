@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomEmptyView" customModule="TMM_Mini" customModuleProvider="target">
+            <connections>
+                <outlet property="lblSubTitle" destination="cKO-oL-05P" id="RbN-x7-aGq"/>
+                <outlet property="lblTitle" destination="bgS-4K-uRu" id="8nn-q6-O3d"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zf5-Na-tBn">
+                    <rect key="frame" x="0.0" y="100" width="375" height="644"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TtH-TC-aUd">
+                            <rect key="frame" x="40" y="285.33333333333331" width="295" height="73.666666666666686"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No activity yet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgS-4K-uRu">
+                                    <rect key="frame" x="0.0" y="0.0" width="295" height="21.666666666666668"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <color key="textColor" name="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="MS_Regular">
+                                            <real key="value" value="26"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="I_SemiBold">
+                                            <real key="value" value="18"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start moving today to see your steps, calories, and trends here." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKO-oL-05P">
+                                    <rect key="frame" x="0.0" y="37.666666666666686" width="295" height="36"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" name="secondaryButton_TextTitle"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="MS_Regular">
+                                            <real key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="I_Regular">
+                                            <real key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="bgS-4K-uRu" firstAttribute="centerX" secondItem="TtH-TC-aUd" secondAttribute="centerX" id="4ao-xI-F3c"/>
+                                <constraint firstItem="cKO-oL-05P" firstAttribute="leading" secondItem="TtH-TC-aUd" secondAttribute="leading" id="518-6M-bHJ"/>
+                                <constraint firstAttribute="trailing" secondItem="bgS-4K-uRu" secondAttribute="trailing" id="5wi-Oe-p7z"/>
+                                <constraint firstAttribute="bottom" secondItem="cKO-oL-05P" secondAttribute="bottom" id="7E9-DC-wpU"/>
+                                <constraint firstItem="cKO-oL-05P" firstAttribute="centerX" secondItem="TtH-TC-aUd" secondAttribute="centerX" id="Gbv-WA-f1V"/>
+                                <constraint firstAttribute="trailing" secondItem="cKO-oL-05P" secondAttribute="trailing" id="U7A-ae-aHp"/>
+                                <constraint firstItem="cKO-oL-05P" firstAttribute="top" secondItem="bgS-4K-uRu" secondAttribute="bottom" constant="16" id="UND-dt-kjY"/>
+                                <constraint firstItem="bgS-4K-uRu" firstAttribute="leading" secondItem="TtH-TC-aUd" secondAttribute="leading" id="mWb-cU-55T"/>
+                                <constraint firstItem="bgS-4K-uRu" firstAttribute="top" secondItem="TtH-TC-aUd" secondAttribute="top" id="u0L-aJ-t9w"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="TtH-TC-aUd" firstAttribute="leading" secondItem="Zf5-Na-tBn" secondAttribute="leading" constant="40" id="35C-wb-vG5"/>
+                        <constraint firstAttribute="trailing" secondItem="TtH-TC-aUd" secondAttribute="trailing" constant="40" id="7HK-iX-ySm"/>
+                        <constraint firstItem="TtH-TC-aUd" firstAttribute="centerX" secondItem="Zf5-Na-tBn" secondAttribute="centerX" id="THE-UH-Uss"/>
+                        <constraint firstItem="TtH-TC-aUd" firstAttribute="centerY" secondItem="Zf5-Na-tBn" secondAttribute="centerY" id="nnD-ms-aBJ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Zf5-Na-tBn" secondAttribute="bottom" id="VDL-Uk-Zfr"/>
+                <constraint firstItem="Zf5-Na-tBn" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="gJC-xx-WDy"/>
+                <constraint firstItem="Zf5-Na-tBn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gdz-IY-yNH"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Zf5-Na-tBn" secondAttribute="trailing" id="pSa-FT-QLT"/>
+            </constraints>
+            <point key="canvasLocation" x="-15" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="secondaryButton_TextTitle">
+            <color red="0.27843137254901962" green="0.33333333333333331" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textColor">
+            <color red="0.0078431372549019607" green="0.023529411764705882" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

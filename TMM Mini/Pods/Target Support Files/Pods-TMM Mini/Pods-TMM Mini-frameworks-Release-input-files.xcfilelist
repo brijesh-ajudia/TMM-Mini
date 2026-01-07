@@ -1,0 +1,6 @@
+${PODS_ROOT}/Target Support Files/Pods-TMM Mini/Pods-TMM Mini-frameworks.sh
+${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework
+${BUILT_PRODUCTS_DIR}/MKRingProgressView/MKRingProgressView.framework
+${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework
+${BUILT_PRODUCTS_DIR}/TOCropViewController/TOCropViewController.framework
+${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework

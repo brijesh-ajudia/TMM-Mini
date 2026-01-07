@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qPY-Oc-LMY">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--HomeVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="HomeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="HomeVC" customModule="TMM_Mini" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cKk-mn-5tM">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFx-u8-Lu2">
+                                        <rect key="frame" x="20.000000000000004" y="134" width="41.333333333333343" height="20.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="descColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="I_Medium">
+                                                <real key="value" value="13"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2nf-ts-FC8">
+                                        <rect key="frame" x="0.0" y="176.33333333333331" width="393" height="607.66666666666674"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pRy-aV-5On" customClass="CustomEmptyView" customModule="TMM_Mini" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="176.33333333333331" width="393" height="607.66666666666674"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5EQ-oE-Prp">
+                                        <rect key="frame" x="273" y="122.33333333333331" width="100" height="44"/>
+                                        <color key="backgroundColor" name="button_BG"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="2ij-9e-Vyd"/>
+                                            <constraint firstAttribute="width" constant="100" id="ifb-Hb-UC7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Log meal">
+                                            <color key="titleColor" name="button_TextTitle"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="I_Medium">
+                                                <real key="value" value="14"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuss">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="logMealAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="iWC-qV-new"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="BG"/>
+                                <constraints>
+                                    <constraint firstItem="pRy-aV-5On" firstAttribute="leading" secondItem="2nf-ts-FC8" secondAttribute="leading" id="0Og-Uh-Zm0"/>
+                                    <constraint firstItem="5EQ-oE-Prp" firstAttribute="centerY" secondItem="HFx-u8-Lu2" secondAttribute="centerY" id="CGu-TK-KhD"/>
+                                    <constraint firstItem="pRy-aV-5On" firstAttribute="bottom" secondItem="2nf-ts-FC8" secondAttribute="bottom" id="F7F-yZ-dr8"/>
+                                    <constraint firstItem="2nf-ts-FC8" firstAttribute="top" secondItem="5EQ-oE-Prp" secondAttribute="bottom" constant="10" id="K0n-5j-ziz"/>
+                                    <constraint firstItem="2nf-ts-FC8" firstAttribute="leading" secondItem="cKk-mn-5tM" secondAttribute="leading" id="MrP-Y2-VfS"/>
+                                    <constraint firstItem="HFx-u8-Lu2" firstAttribute="leading" secondItem="cKk-mn-5tM" secondAttribute="leading" constant="20" id="UFU-hC-Ofc"/>
+                                    <constraint firstAttribute="trailing" secondItem="5EQ-oE-Prp" secondAttribute="trailing" constant="20" id="XsS-Qy-nTd"/>
+                                    <constraint firstItem="pRy-aV-5On" firstAttribute="top" secondItem="2nf-ts-FC8" secondAttribute="top" id="aQ0-sb-hOT"/>
+                                    <constraint firstAttribute="trailing" secondItem="2nf-ts-FC8" secondAttribute="trailing" id="fIt-Lc-XuP"/>
+                                    <constraint firstItem="pRy-aV-5On" firstAttribute="trailing" secondItem="2nf-ts-FC8" secondAttribute="trailing" id="iea-7z-ZIP"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cKk-mn-5tM" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="KyW-Yb-DL8"/>
+                            <constraint firstItem="cKk-mn-5tM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="N7y-Nc-zzg"/>
+                            <constraint firstItem="2nf-ts-FC8" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="PCq-dL-zVK"/>
+                            <constraint firstItem="HFx-u8-Lu2" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="R0T-ra-6oQ"/>
+                            <constraint firstItem="cKk-mn-5tM" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="fW3-XQ-n8F"/>
+                            <constraint firstAttribute="bottom" secondItem="cKk-mn-5tM" secondAttribute="bottom" id="lu9-DW-ph4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="bQg-hV-J6Y"/>
+                    <connections>
+                        <outlet property="btnLogMeal" destination="5EQ-oE-Prp" id="VEV-HK-lGs"/>
+                        <outlet property="emptyView" destination="pRy-aV-5On" id="JOD-yh-SeF"/>
+                        <outlet property="lblDate" destination="HFx-u8-Lu2" id="z8d-i4-QxS"/>
+                        <outlet property="tblHealthData" destination="2nf-ts-FC8" id="eDJ-r8-5Mm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="907.63358778625945" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6fE-yw-aXT">
+            <objects>
+                <navigationController storyboardIdentifier="HomeNavVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="qPY-Oc-LMY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wqR-q6-bcz">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="pEc-0B-icE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0rI-NY-Nj0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="163" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="BG">
+            <color red="0.97254901960784312" green="0.98039215686274506" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="button_BG">
+            <color red="0.89803921568627454" green="0.90588235294117647" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="button_TextTitle">
+            <color red="0.066666666666666666" green="0.094117647058823528" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="descColor">
+            <color red="0.27843137254901962" green="0.33333333333333331" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
