@@ -5,6 +5,20 @@ TrackMyMetric Demo Task
 
 A modern iOS health tracking application that provides users with clear, actionable insights about their daily activity through HealthKit integration.
 
+----------------------------------------------------
+
+# TMM Mini - Short Video og App Walkthrough
+
+https://drive.google.com/file/d/10i4LMfjYPyZeFxDiFKY9oJvcqm_JyD03/view?usp=sharing <= **VIDEO OF THE APP**
+
+The Limited Mode screen may not appear in normal usage if HealthKit permission has already been granted.
+To intentionally view and verify this state, please follow the steps below:
+1. Launch the app for the first time
+2. When the HealthKit permission prompt appears, dismiss it by immediately closing the app (do not allow access)
+3. Relaunch the app
+After relaunching, the app will detect the denied permission state and display the LimitedModeScreenView, which explains the restricted functionality and provides a retry option.
+
+----------------------------------------------------
 ## 📱 Overview
 
 TMM Mini is a health tracking application that helps users monitor their daily steps and calorie burn through beautiful visualizations and meaningful insights. The app features fitness rings (inspired by Apple Watch), 7-day trend charts, and personalized weekly comparisons.
