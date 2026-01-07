@@ -38,7 +38,8 @@ class LogMealVC: BaseVC {
     // MARK: - Edit Mode
     var existingFoodEntry: FoodEntry?
     var isEditMode: Bool = false
-
+    
+    var onMealLogged: (() -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -180,7 +181,8 @@ class LogMealVC: BaseVC {
             showSuccessAlert(message: "Meal updated successfully!") {
                 self.btnLogMeal.isActive = false
                 self.btnLogMeal.isUserInteractionEnabled = true
-                self.navigationController?.popViewController(animated: true)
+                self.onMealLogged?()
+                self.dismiss(animated: true)
             }
         } else {
             // Create new entry
@@ -198,7 +200,8 @@ class LogMealVC: BaseVC {
             showSuccessAlert(message: "Meal logged successfully!") {
                 self.btnLogMeal.isActive = false
                 self.btnLogMeal.isUserInteractionEnabled = true
-                self.navigationController?.popViewController(animated: true)
+                self.onMealLogged?()
+                self.dismiss(animated: true)
             }
         }
     }

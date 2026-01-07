@@ -24,40 +24,39 @@ class NutritionVC: UIViewController {
         
         setupUI()
         setupTableView()
-
-        self.btnNutrition.lblTitle.font = AppFont.font(type: .I_Bold, size: 16)
-        self.btnNutrition.onToggle = { [weak self] _ in
-            self?.btnNutrition.isActive = false
-            let logMealVC = Utils.loadVC(strStoryboardId: StoryBoard.SB_Nutrition, strVCId: ViewControllerID.VC_LogMeal) as! LogMealVC
-            logMealVC.isEditMode = false
-            
-            // Present as bottom sheet modal
-            if let sheet = logMealVC.sheetPresentationController {
-                sheet.detents = [.medium(), .large()] // Half and full screen options
-                sheet.prefersGrabberVisible = true // Show the handle at top
-                sheet.preferredCornerRadius = 20 // Rounded corners
-            }
-            
-            self?.present(logMealVC, animated: true)
-        }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         loadData()
     }
-    
     
     func setupUI() {
         self.btnNutrition.lblTitle.font = AppFont.font(type: .I_Bold, size: 16)
         self.btnNutrition.onToggle = { [weak self] _ in
-            self?.btnNutrition.isActive = false
-            let logMealVC = Utils.loadVC(strStoryboardId: StoryBoard.SB_Nutrition, strVCId: ViewControllerID.VC_LogMeal) as! LogMealVC
+            guard let self = self else { return }
+            
+            self.btnNutrition.isActive = false
+            
+            let logMealVC = Utils.loadVC(
+                strStoryboardId: StoryBoard.SB_Nutrition,
+                strVCId: ViewControllerID.VC_LogMeal
+            ) as! LogMealVC
+            
+            logMealVC.onMealLogged = { [weak self] in
+                print("🍽️ Meal logged callback received!")
+                self?.loadData()
+            }
+            
             logMealVC.isEditMode = false
-            self?.navigationController?.pushViewController(logMealVC, animated: true)
+            
+            // Present as bottom sheet modal
+            if let sheet = logMealVC.sheetPresentationController {
+                sheet.detents = [.medium(), .large()]
+                sheet.prefersGrabberVisible = true
+                sheet.preferredCornerRadius = 20
+            }
+            
+            self.present(logMealVC, animated: true)
         }
         
-        // No data label
+        // Empty view setup
         emptyView.lblTitle.text = "No meals logged yet"
         emptyView.lblSubTitle.text = "Log your meals to track calories and macros."
     }
@@ -191,6 +190,12 @@ extension NutritionVC: UITableViewDataSource, UITableViewDelegate {
         let foodEntry = foodEntries[indexPath.row]
         
         let logMealVC = Utils.loadVC(strStoryboardId: StoryBoard.SB_Nutrition, strVCId: ViewControllerID.VC_LogMeal) as! LogMealVC
+        
+        logMealVC.onMealLogged = { [weak self] in
+            guard let self = self else { return }
+            self.loadData()
+        }
+        
         logMealVC.isEditMode = true
         logMealVC.existingFoodEntry = foodEntry
         
